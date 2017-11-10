@@ -18,23 +18,26 @@ header{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
-    
+    background-color: gray; 
+    border: 1px solid #000000;   
 }
+
 .twoboxes{
     display: grid;
     margin-top: 100px;
     grid-column-gap:20px;
-    grid-template-columns: 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr;   
 }
-.izbox, .derbox { 
+
+.box-two{ 
     width: 100%;
     height: 300px;
     background-color: gray;
     margin-right: 20px;
+    border: 1px solid #000000;
 }
-.derbox { 
+
+.box-two:last-child { 
     margin-right: 0px;
 }
 
@@ -46,15 +49,15 @@ header{
     grid-template-columns: repeat(3, 1fr);
 } 
 
-.boxiz, .boxcent, .boxder{
+.box-three{
     width:100%;
     height:100%;
     margin-right: 20px;
-    height: 120px;
-    
+    height: 120px; 
+    border: 1px solid #000000;   
 }
 
-.boxder{
+.box-three:last-child{
     margin-right: 0px;
 }
 
@@ -63,27 +66,31 @@ article{
 }
 
 .bottom{
-      display: flex;
-      height: 200px;
-      background-color: gray;
-      margin-top: 20px;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    height: 200px;
+    background-color: gray;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000; 
 } 
 
 .bottom article{
     width:150px;
     height:150px;
     background-color: gray;
-    border: 1px solid #000000   
+    border: 1px solid #000000;   
 } 
 
  @media(max-width:500px){
      .twoboxes, .threeboxes{
          grid-template-columns: 1fr;
     }
-    .izbox, .derbox, .boxcent, .boxder, .boxiz{
+    .box-three, .box-two{
         margin-bottom: 20px;
+    }
+    .threeboxes, .bottom{
+        margin-top:0px;
     }
 } 
         
